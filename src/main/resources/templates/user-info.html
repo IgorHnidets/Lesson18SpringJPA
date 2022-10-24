@@ -1,0 +1,22 @@
+<!
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User-info</title>
+</head>
+<body>
+<h2>User info</h2>
+
+<h3 th:text="${user.firstname } +  ${user.lastname}"></h3>
+<b>email : </b> <span th:text="${user.email}"></span>
+
+<div>
+    <img width="200" height="200" th:src="@{/images/{avatar}(avatar=${user.avatar})}" alt="avatar">
+</div>
+
+
+</body>
+</html>

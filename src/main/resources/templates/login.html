@@ -1,0 +1,47 @@
+<!
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <style>
+        .error{
+            color: red;
+            font-size: 15px;
+            width: 10%;
+            border: 1px solid black;
+        }
+        .logoutSuc{
+            color: green;
+            font-size: 15px;
+            width: 10%;
+            border: 1px solid black;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+<h1>Login</h1>
+
+<form name="login" th:action="@{/login}" method="post">
+    <div>
+        <input type="text" name="username" placeholder="Your email">
+    </div>
+    <div>
+        <input type="password" name="password" placeholder="Password">
+    </div>
+    <div class="error" th:if="${param.error}">
+        Incorrect pass or email
+    </div>
+    <div class="logoutSuc" th:if="${param.logout}">
+        Success logout
+    </div>
+    <div>
+    <input type="submit">
+    </div>
+</form>
+
+</body>
+</html>

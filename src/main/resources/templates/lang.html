@@ -1,0 +1,19 @@
+<!
+<html lang="en" xmlns:th="https://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+<h1 th:text="#{greeting}"></h1>
+
+<select>
+  <option th:text="#{lang.change}" disabled ></option>
+  <option th:text="#{lang.en}"></option>
+  <option th:text="#{lang.ua}"></option>
+</select>
+</body>
+</html>
